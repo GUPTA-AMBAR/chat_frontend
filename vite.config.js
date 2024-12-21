@@ -10,13 +10,13 @@ const BURL = process.env.VITE_BACKURL;
 export default defineConfig({
   plugins: [react()],
 
-  server: {
-		port: 5000,
-		proxy: {
-			"/api": {
-				target: BURL,
-				changeOrigin: true,
-			},
-		},
-	},
+//   server: {
+// 		port: 5000,
+// 		proxy: {
+// 			"/api": {
+// 				target: BURL,
+// 				changeOrigin: true,
+// 			},
+// 		},
+// 	},
 })
