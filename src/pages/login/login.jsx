@@ -7,6 +7,8 @@ const Login = () => {
 		username : "",
 		password :""
 	})
+
+	console.log(inputs);
 	const {loading ,uselogin}= UseLogin();
 
 	const handleSummit = async(e)=>{
