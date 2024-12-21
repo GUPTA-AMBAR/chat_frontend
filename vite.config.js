@@ -5,7 +5,7 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 
-const BURL = process.env.BACKURL;
+const BURL = process.env.VITE_BACKURL;
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
