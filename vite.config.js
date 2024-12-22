@@ -26,7 +26,6 @@
 
 
 
-
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import dotenv from 'dotenv'
@@ -37,13 +36,14 @@ const BURL = process.env.VITE_BACKURL
 
 export default defineConfig({
   plugins: [react()],
-  base: "./", // Ensures correct relative paths in production
+  base: "./",
   server: {
     port: 5000,
     proxy: {
       "/api": {
-        target: BURL,
+        target: BURL, // Ensure this points to your backend URL
         changeOrigin: true,
+        secure: false,
       },
     },
   },
